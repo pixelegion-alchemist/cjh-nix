@@ -8,7 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, stable, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, stable, home-manager, ... }:
     let
       system = "x86_64-linux";
 
@@ -28,7 +28,7 @@
       };
     in {
       nixosConfigurations.nixylearn = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
 
         modules = [
           ./machines/nixylearn/configuration.nix
@@ -44,7 +44,9 @@
           }
         ];
 
-        inherit pkgs;
+        specialArgs = {
+          inherit inputs;
+        };
       };
     };
 }
