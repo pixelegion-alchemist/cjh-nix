@@ -36,12 +36,12 @@
 
     homeConfigurations.${username} =
       home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgsStable;
-        nixpkgs = { config.allowUnfree = true; };                    
+        pkgs = pkgsStable;                 
 
         extraSpecialArgs = {                   
           unstablePkgs = pkgsUnstable;
         };
+
         modules = [ ./home/home.nix ];
       };
 
