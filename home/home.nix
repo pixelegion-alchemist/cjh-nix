@@ -23,13 +23,15 @@
 	python310
 	ffmpeg
 	vlc
-	zoom-us
+	blender
 	inkscape
 	nodejs_24
 	obs-studio
 	rclone
 	git
     (unstablePkgs.windsurf)
+    (unstablePkgs.zoom-us)
+    (unstablePkgs.godot)
   ];
 
   programs.git.enable = true;
