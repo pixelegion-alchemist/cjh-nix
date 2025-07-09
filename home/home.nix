@@ -10,8 +10,26 @@
 
   # Mix & match
   home.packages = with pkgs; [
-    krita
-    (unstablePkgs.vscode)         
+    wget
+	obsidian
+	orca-slicer
+	slack
+	discord
+	zapzap
+	krita
+	filezilla
+	tailscale
+	github-desktop
+	python310
+	ffmpeg
+	vlc
+	zoom-us
+	inkscape
+	nodejs_24
+	obs-studio
+	rclone
+	git
+    (unstablePkgs.windsurf)
   ];
 
   programs.git.enable = true;
