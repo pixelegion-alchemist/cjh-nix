@@ -111,7 +111,7 @@
   ];
 
   home-manager = {
-	extraSpecialArgs = {inherit inputs unstablePkgs; };
+	extraSpecialArgs = {inherit inputs; };
 	users = {
 		"wowmonkey" = import ../../home/home.nix;
 	};

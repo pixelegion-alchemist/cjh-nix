@@ -15,7 +15,12 @@
     # One overlay that makes pkgs.unstable.* available everywhere
     overlays = [
       (final: prev: {
-        unstable = unstable.legacyPackages.${system};
+        unstable = import inputs.unstable {
+          inherit (prev.stdenv.hostPlatform) system;
+
+          # copy the same config the main pkgs uses
+          config = prev.config;           # brings along allowUnfree = true
+        } ;
       })
     ];
   in
@@ -39,6 +44,7 @@
           home-manager.users.wowmonkey = import ./home/home.nix;
         })
       ];
+      specialArgs = { inherit inputs; };
     };
   };
 }
