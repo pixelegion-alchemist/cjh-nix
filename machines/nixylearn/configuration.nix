@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      /home/wowmonkey/cjh-nix/flake
       inputs.home-manager.nixosModules.default
     ];
 
@@ -133,7 +132,7 @@
   home-manager = {
 	extraSpecialArgs = {inherit inputs; };
 	users = {
-		"wowmonkey" = import /home/wowmonkey/cjh-nix/home/home.nix;
+		"wowmonkey" = import ../../home/home.nix;
 	};
   };  
 
