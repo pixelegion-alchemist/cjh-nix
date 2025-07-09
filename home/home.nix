@@ -29,9 +29,11 @@
 	rclone
 	git
 	brave
+	gimp3
     unstable.windsurf
     unstable.zoom-us
     unstable.godot
+    unstable.davinci-resolve
   ];
 
   programs.git.enable = true;
