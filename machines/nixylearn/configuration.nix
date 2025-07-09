@@ -2,11 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... } @ args:
+{ config, pkgs, unstablePkgs, inputs, ... }:
 
-let
-  inputs = args.inputs;
-in
 
 {
   imports =
@@ -104,7 +101,7 @@ in
   programs.firefox.enable = true;
 
   # Allow unfree packages
-#   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -115,7 +112,7 @@ in
   ];
 
   home-manager = {
-	extraSpecialArgs = {inherit inputs; };
+	extraSpecialArgs = {inherit inputs unstablePkgs; };
 	users = {
 		"wowmonkey" = import ../../home/home.nix;
 	};
