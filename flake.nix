@@ -12,7 +12,11 @@
 
 ### 2. Outputs (what this flake provides)
   outputs = { self, nixpkgs, unstable, home-manager }: let
-    pkgsStable = nixpkgs.legacyPackages.x86_64-linux;
+
+    pkgsStable = import nixpkgs {
+      system = "x86_64-linux";
+      config.allowUnfree = true;   # ← enable un-free in this pkg set
+    };
     pkgsUnstable = import unstable {
       system = "x86_64-linux";
       config.allowUnfree = true;   # ← enable un-free in this pkg set
