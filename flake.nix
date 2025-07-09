@@ -24,7 +24,7 @@
 
       pkgs = import nixpkgs {
         inherit system overlays;
-        config.allowUnfree = true;
+#         config.allowUnfree = true;
       };
     in {
       nixosConfigurations.nixylearn = nixpkgs.lib.nixosSystem {
@@ -40,7 +40,7 @@
             home-manager.users.wowmonkey = import ./home/home.nix;
 
             nixpkgs.overlays = overlays;
-            nixpkgs.config.allowUnfree = true;
+#             nixpkgs.config.allowUnfree = true;
           }
         ];
 
