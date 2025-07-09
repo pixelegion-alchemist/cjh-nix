@@ -2,7 +2,6 @@
 
 {
   home.username      = "wowmonkey";
-  home.homeDirectory = "/home/wowmonkey";
 
   home.stateVersion = "25.05";
 
