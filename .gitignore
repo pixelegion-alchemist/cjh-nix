@@ -1,3 +1,4 @@
 
 flake.lock
 *.lock
+*.kate-swp

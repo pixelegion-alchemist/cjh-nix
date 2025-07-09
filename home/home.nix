@@ -1,11 +1,11 @@
-{ pkgs, unstablePkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username      = "wowmonkey";
 
-  home.stateVersion = "25.05";
+#   home.stateVersion = "25.05";
 
-  nixpkgs.config.allowUnfree = true;
+
 
   # Mix & match
   home.packages = with pkgs; [
@@ -28,9 +28,10 @@
 	obs-studio
 	rclone
 	git
-    (unstablePkgs.windsurf)
-    (unstablePkgs.zoom-us)
-    (unstablePkgs.godot)
+	brave
+    unstable.windsurf
+    unstable.zoom-us
+    unstable.godot
   ];
 
   programs.git.enable = true;
