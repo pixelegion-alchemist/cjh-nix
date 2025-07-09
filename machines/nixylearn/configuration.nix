@@ -136,7 +136,7 @@ in
   home-manager = {
 	extraSpecialArgs = {inherit inputs; };
 	users = {
-		"wowmonkey" = import ../home/home.nix;
+		"wowmonkey" = import ../../home/home.nix;
 	};
   };  
 
