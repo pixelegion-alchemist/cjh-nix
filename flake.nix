@@ -6,7 +6,7 @@
  inputs = {
     nixpkgs.url       = "github:NixOS/nixpkgs/nixos-25.05";   # or nixos-unstable
     unstable.url     = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url  = "github:nix-community/home-manager";
+    home-manager.url  = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
    };
 
@@ -15,6 +15,7 @@
     pkgsStable = nixpkgs.legacyPackages.x86_64-linux;
     pkgsUnstable = unstable.legacyPackages.x86_64-linux;
     username = "wowmonkey";
+
   in {
     packages.x86_64-linux = rec {
 

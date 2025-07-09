@@ -4,6 +4,9 @@
   home.username      = "wowmonkey";
   home.homeDirectory = "/home/wowmonkey";
 
+  home.stateVersion = "25.05";
+  nixpkgs.config.allowUnfree = true;
+
   # Mix & match
   home.packages = with pkgs; [
     krita
