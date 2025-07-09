@@ -23,8 +23,8 @@
     nixosConfigurations.nixylearn = nixpkgs.lib.nixosSystem {
       inherit system;
 
-      nixpkgs.overlays = overlays;          #  ← NO specialArgs.pkgs
       modules = [
+        ({ ... }: { nixpkgs.overlays = overlays; })
         ./machines/nixylearn/configuration.nix
         ./machines/nixylearn/hardware-configuration.nix
         home-manager.nixosModules.home-manager
