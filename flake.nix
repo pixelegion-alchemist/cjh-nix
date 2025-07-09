@@ -37,7 +37,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.wowmonkey = import ./home.nix;
+            home-manager.users.wowmonkey = import ./home/home.nix;
 
             nixpkgs.overlays = overlays;
             nixpkgs.config.allowUnfree = true;
