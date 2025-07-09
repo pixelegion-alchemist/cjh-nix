@@ -36,7 +36,8 @@
 
     homeConfigurations.${username} =
       home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgsStable;                    
+        pkgs = pkgsStable;
+        nixpkgs = { config.allowUnfree = true; };                    
 
         extraSpecialArgs = {                   
           unstablePkgs = pkgsUnstable;
