@@ -11,7 +11,7 @@
   # Mix & match
   home.packages = with pkgs; [
     krita
-    (unstablePkgs.vscode)          
+    (unstablePkgs.vscode)         
   ];
 
   programs.git.enable = true;
