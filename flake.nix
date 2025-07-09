@@ -27,12 +27,12 @@
         config.allowUnfree = true;
       };
     in {
-      nixosConfigurations.nixylearn = pkgs.lib.nixosSystem {
+      nixosConfigurations.nixylearn = nixpkgs.lib.nixosSystem {
         inherit system;
 
         modules = [
-          ./configuration.nix
-
+          ./machines/nixylearn/configuration.nix
+          /etc/nixos/hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
