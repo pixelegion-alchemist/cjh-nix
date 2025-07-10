@@ -46,5 +46,28 @@
       ];
       specialArgs = { inherit inputs; };
     };
+
+    nixosConfigurations.bloodynix = nixpkgs.lib.nixosSystem {
+      inherit system;
+
+      modules = [
+        ({ ... }: { nixpkgs.overlays = overlays; })
+        ./machines/bloodynix/configuration.nix
+        ./machines/bloodynix/hardware-configuration.nix
+        home-manager.nixosModules.home-manager
+
+        # little inline module for global knobs
+        ({ pkgs, ... }: {
+          nixpkgs.config.allowUnfree = true;   # applies to both stable & unstable
+
+          home-manager.useGlobalPkgs   = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.wowmonkey = import ./home/home.nix;
+        })
+      ];
+      specialArgs = { inherit inputs; };
+    };
+
   };
 }

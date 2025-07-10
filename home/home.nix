@@ -27,13 +27,11 @@
 	nodejs_24
 	obs-studio
 	rclone
-	git
-	brave
 	gimp3
     unstable.windsurf
     unstable.zoom-us
     unstable.godot
-    unstable.davinci-resolve
+    unstable.davinci-resolve-studio
   ];
 
   programs.git.enable = true;
