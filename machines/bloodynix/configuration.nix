@@ -156,7 +156,7 @@
   programs.firefox.enable = true;
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
-  remotePlay.openFirewall = true;
+  programs.steam.remotePlay.openFirewall = true;
   programs.gamemode.enable = true;
 
   # Allow unfree packages
