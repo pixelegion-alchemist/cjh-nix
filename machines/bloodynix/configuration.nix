@@ -11,6 +11,29 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  fileSystems."/mnt/podsync" = {
+    device = "192.168.0.11:/mnt/instances/podsync";
+    fsType = "nfs";
+  };
+
+  fileSystems."/mnt/prod" = {
+    device = "192.168.0.11:/mnt/instances/prod";
+    fsType = "nfs";
+  };
+
+  fileSystems."/mnt/colin_abstract" = {
+    device = "192.168.0.11:/mnt/big18/colin_abstract";
+    fsType = "nfs";
+  };
+
+  fileSystems."/mnt/zdrive" = {
+    device = "192.168.0.11:/mnt/big18/zdrive";
+    fsType = "nfs";
+  };
+
+
+  boot.supportedFilesystems = [ "nfs" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

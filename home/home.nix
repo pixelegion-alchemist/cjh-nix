@@ -28,6 +28,7 @@
 	obs-studio
 	rclone
 	gimp3
+	btop
     unstable.windsurf
     unstable.zoom-us
     unstable.godot
