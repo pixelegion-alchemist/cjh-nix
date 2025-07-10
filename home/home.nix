@@ -4,7 +4,10 @@
   home.username      = "wowmonkey";
 
   home.stateVersion = "25.05";
-
+	home.sessionVariables = {
+		STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+	};		
+	
 
 
   # Mix & match
@@ -29,6 +32,7 @@
 	rclone
 	gimp3
 	btop
+	protonup
 	docker
     unstable.windsurf
     unstable.zoom-us
