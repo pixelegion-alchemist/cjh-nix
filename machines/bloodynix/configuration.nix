@@ -145,7 +145,7 @@
   users.users.wowmonkey = {
     isNormalUser = true;
     description = "wowmonkey";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

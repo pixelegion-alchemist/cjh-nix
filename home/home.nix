@@ -29,6 +29,7 @@
 	rclone
 	gimp3
 	btop
+	docker
     unstable.windsurf
     unstable.zoom-us
     unstable.godot
