@@ -21,7 +21,6 @@
 	krita
 	filezilla
 	tailscale
-	nvidia-container-toolkit
 	github-desktop
 	python310
 	ffmpeg
