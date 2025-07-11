@@ -21,6 +21,7 @@
 	krita
 	filezilla
 	tailscale
+	nvidia-container-toolkit
 	github-desktop
 	python310
 	ffmpeg
@@ -33,6 +34,7 @@
 	gimp3
 	btop
 	docker
+	docker-compose
     unstable.windsurf
     unstable.zoom-us
     unstable.godot

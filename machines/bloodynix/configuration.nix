@@ -85,6 +85,8 @@
     enable = true;
   };
 
+  services.tailscale.enable = true;
+
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -159,6 +161,8 @@
   programs.steam.remotePlay.openFirewall = true;  # steam remote play
   programs.gamemode.enable = true;  # gamemode
   virtualisation.docker.enable = true;  # docker
+  hardware.nvidia-container-toolkit.enable = true; 
+
 
   # Allow unfree packages
 #   nixpkgs.config.allowUnfree = true;
