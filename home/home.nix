@@ -37,6 +37,7 @@
 		unstable.zoom-us
 		unstable.godot
 		unstable.davinci-resolve-studio
+		uv
   ];
 
   programs.git.enable = true;

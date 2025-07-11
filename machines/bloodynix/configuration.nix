@@ -45,6 +45,11 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  nix.settings.extra-experimental-features = [ "nix-command" "flakes" ];
+
+  #allow things like UV to work
+  programs.nix-ld.enable = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 
