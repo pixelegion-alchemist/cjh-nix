@@ -86,7 +86,7 @@
   };
 
   services.tailscale.enable = true;
-  services.flatpak.enable = true;
+  
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
@@ -179,6 +179,7 @@
   #  wget
   ];
 
+  services.flatpak.enable = true;
   services.flatpak.packages = [
     { appId = "app.zen_browser.zen"; origin = "flathub"; }
   ];
