@@ -86,6 +86,7 @@
   };
 
   services.tailscale.enable = true;
+  services.flatpak.enable = true;
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
@@ -173,9 +174,13 @@
    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
    brave
    git
+   git-lfs
    protonup
-   inputs.zen-browser.packages."${system}".default
   #  wget
+  ];
+
+  services.flatpak.packages = [
+    { appId = "app.zen_browser.zen"; origin = "flathub"; }
   ];
 
   home-manager = {
