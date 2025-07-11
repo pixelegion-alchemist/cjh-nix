@@ -32,7 +32,6 @@
 	rclone
 	gimp3
 	btop
-	protonup
 	docker
     unstable.windsurf
     unstable.zoom-us

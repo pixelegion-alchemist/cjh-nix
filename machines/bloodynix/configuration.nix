@@ -168,6 +168,8 @@
    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
    brave
    git
+   protonup
+   inputs.zen-browser.packages."${system}".default
   #  wget
   ];
 
@@ -204,6 +206,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "ondemand";
 
 }
