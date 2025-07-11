@@ -152,12 +152,13 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.steam.remotePlay.openFirewall = true;
-  programs.gamemode.enable = true;
+  # Key App Configs
+  programs.firefox.enable = true;  # firefox
+  programs.steam.enable = true;  # steam
+  programs.steam.gamescopeSession.enable = true;  # steam gamescope
+  programs.steam.remotePlay.openFirewall = true;  # steam remote play
+  programs.gamemode.enable = true;  # gamemode
+  virtualisation.docker.enable = true;  # docker
 
   # Allow unfree packages
 #   nixpkgs.config.allowUnfree = true;
