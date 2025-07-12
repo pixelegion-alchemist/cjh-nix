@@ -31,8 +31,10 @@
 		rclone
 		gimp3
 		btop
+		fastfetch
 		docker
 		docker-compose
+		kdePackages.kcalc
 		unstable.windsurf
 		unstable.zoom-us
 		unstable.godot
