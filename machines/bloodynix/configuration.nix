@@ -150,6 +150,28 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+
+  users.groups.wowmonkey = {
+    name = "wowmonkey";
+    gid = 3001;
+    members = [ "wowmonkey" ];
+  };
+    users.groups.pixelegion = {
+    name = "pixelegion";
+    gid = 3002;
+    members = [ "wowmonkey" ];
+  };
+    users.groups.hodges = {
+    name = "hodges";
+    gid = 3003;
+    members = [ "wowmonkey" ];
+  };
+    users.groups.greencgmonkey = {
+    name = "greencgmonkey";
+    gid = 3004;
+    members = [ "wowmonkey" ];
+  };
+
   users.users.wowmonkey = {
     isNormalUser = true;
     description = "wowmonkey";
@@ -168,7 +190,7 @@
   programs.gamemode.enable = true;  # gamemode
   virtualisation.docker.enable = true;  # docker
   hardware.nvidia-container-toolkit.enable = true; 
-
+  programs.ssh.startAgent = true;
 
   # Allow unfree packages
 #   nixpkgs.config.allowUnfree = true;
