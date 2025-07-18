@@ -24,22 +24,26 @@
 		python310
 		ffmpeg
 		vlc
-		blender
 		inkscape
 		nodejs_24
 		obs-studio
-		rclone
 		gimp3
 		btop
 		fastfetch
+		f3d
+		unrar
+		unzip
 		docker
 		docker-compose
+		cudatoolkit
 		kdePackages.kcalc
 		unstable.windsurf
 		unstable.zoom-us
 		unstable.godot
 		unstable.davinci-resolve-studio
+		unstable.rclone
 		uv
+		blender
   ];
 
   programs.git.enable = true;

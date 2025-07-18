@@ -26,6 +26,27 @@
           inherit (prev.stdenv.hostPlatform) system;
           config = prev.config;
         };
+        # blender = prev.blender.overrideAttrs (old: let
+        #   manifold = prev.manifold;                # already packaged in nixpkgs
+        #   clipper2 = prev.clipper2;
+        #   tbb = prev.tbb;
+        # in rec{
+        #   version = "4.5.0";                       # whatever tag you’re bumping to
+        #   src     = prev.fetchzip {
+        #     url = "https://download.blender.org/source/blender-${version}.tar.xz";
+        #     hash = "sha256-ERT/apulQ9ogA7Uk/AfjBee0rLjxEXItw6GwDOoysXk=";
+        #   };
+        #   buildInputs = old.buildInputs ++ [ manifold clipper2 tbb ];
+
+        #   # Point CMake at the package’s config file
+        #   cmakeFlags  = old.cmakeFlags ++ [
+        #     "-Dmanifold_DIR=${manifold}/lib/cmake/Manifold"
+        #     "-Dclipper2_DIR=${clipper2}/lib/cmake/Clipper2"
+        #     "-DTBB_ROOT=${tbb}"
+        #     # optional but harmless:
+        #     "-DWITH_MANIFOLD=ON"
+        #   ];
+        # });
       })
     ];
   in
@@ -42,6 +63,7 @@
         # little inline module for global knobs
         ({ pkgs, ... }: {
           nixpkgs.config.allowUnfree = true;   # applies to both stable & unstable
+          nixpkgs.config.cudaSupport = true;
           
           home-manager.useGlobalPkgs   = true;
           home-manager.useUserPackages = true;
