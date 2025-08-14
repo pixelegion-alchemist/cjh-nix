@@ -42,8 +42,10 @@
 		unstable.godot
 		unstable.davinci-resolve-studio
 		unstable.rclone
+		unstable.blender
 		uv
-		blender
+		polonium
+		xorg.xkill
   ];
 
   programs.git.enable = true;

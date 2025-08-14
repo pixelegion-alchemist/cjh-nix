@@ -37,6 +37,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+
+  boot.kernelModules = [ "v4l2loopback" ];
+  security.polkit.enable = true;
 
   networking.hostName = "bloodynix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
