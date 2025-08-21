@@ -95,7 +95,8 @@
   };
 
   services.tailscale.enable = true;
-  
+  services.hardware.openrgb.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
@@ -233,7 +234,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
