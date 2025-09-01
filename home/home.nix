@@ -19,6 +19,7 @@
 		zapzap
 		krita
 		filezilla
+		nfs-utils
 		tailscale
 		github-desktop
 		python310
