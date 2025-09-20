@@ -13,9 +13,9 @@
   home.packages = with pkgs; [
 		wget
 		obsidian
-		orca-slicer
+		unstable.orca-slicer
 		slack
-		discord
+		unstable.discord
 		zapzap
 		krita
 		filezilla
@@ -28,7 +28,9 @@
 		inkscape
 		nodejs_24
 		obs-studio
+		obs-studio-plugins.obs-source-record
 		gimp3
+		dunst
 		btop
 		fastfetch
 		f3d
@@ -36,7 +38,10 @@
 		unzip
 		docker
 		docker-compose
+		dropbox
 		cudatoolkit
+		libreoffice
+		kdePackages.kdenlive
 		kdePackages.kcalc
 		unstable.windsurf
 		unstable.zoom-us
@@ -45,6 +50,7 @@
 		unstable.rclone
 		unstable.blender
 		uv
+		audacity
 		polonium
 		xorg.xkill
   ];

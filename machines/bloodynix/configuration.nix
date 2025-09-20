@@ -34,6 +34,8 @@
 
   boot.supportedFilesystems = [ "nfs" ];
 
+#   boot.kernelPackages = pkgs.linuxPackages_6_12_hardened;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -198,7 +200,7 @@
   programs.ssh.startAgent = true;
 
   # Allow unfree packages
-#   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
