@@ -53,6 +53,13 @@
 		audacity
 		polonium
 		xorg.xkill
+		virt-manager
+		spice-gtk
+		spice-vdagent
+		virglrenderer
+		mesa-demos
+		qemu_full
+		pika-backup
   ];
 
   programs.git.enable = true;

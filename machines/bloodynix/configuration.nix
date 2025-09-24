@@ -179,6 +179,10 @@
     members = [ "wowmonkey" ];
   };
 
+  users.groups.render.members = [ "qemu-libvirtd" ];
+  users.groups.video.members = [ "qemu-libvirtd" ];
+
+
   users.users.wowmonkey = {
     isNormalUser = true;
     description = "wowmonkey";
@@ -198,6 +202,16 @@
   virtualisation.docker.enable = true;  # docker
   hardware.nvidia-container-toolkit.enable = true; 
   programs.ssh.startAgent = true;
+
+  # virt-manager
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = [ "wowmonkey" ];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
+
+
+  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
