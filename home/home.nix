@@ -60,6 +60,7 @@
 		mesa-demos
 		qemu_full
 		pika-backup
+		kdePackages.isoimagewriter
   ];
 
   programs.git.enable = true;
